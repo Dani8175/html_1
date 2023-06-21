@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./result.html" method="get"> 
+      <fieldset>
+        <legend>XX병원 예약</legend>
+        <div> 
+            <label for="name">이름: </label> &nbsp;
+            <input type="text" name="name" placeholder="name" autocomplete="on" required>
+        </div>
+        <div>
+            <label for="gender"> 성별 </label>&nbsp;&nbsp;
+            <select name="gender">
+                <option value="man">남자</option>
+                <option value="woman">여자</option>
+                </select>
+        </div>
+        <div>
+            <label for="age"> 나이: </label> &nbsp;
+            <input type="number" name="age" min="0" max="100" step="10" autocomplete="off">
+        </div>
+        <div>
+             <label for="summary"> 진료 사유: </label>
+             <textarea name="summary" rows="10" cols="25" placeholder="내용 입력"></textarea>
+        </div>
+        <div>
+            <select name="type">
+                <option value="T_AS_1">처음 방문</option>
+                <option value="T_AS_2">재방문</option>
+                <option value="T_AS_3">기타</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" name="type_2_1" value="1day">
+            <label for="type_2">1일 이내</label>
+            <input type="checkbox" name="type_2_2" value="1week">
+            <label for="type_2_2">1주 이내</label>
+            <input type="checkbox" name="type_2_3" value="1month">
+            <label for="type_2_3">1달 이내</label>
+        </div>
+        <div><!-- name이 같을 시 왔다갔다 다를시 둘다 체크 가능 -->
+            <input type="radio" name="type_3_1" value="emergency">
+            <label for="type_3_1">긴급</label>
+            <input type="radio" name="type_3_1" value="normal" checked>
+            <label for="type_3_2">일반</label>
+        </div>
+        <div>
+            <button type="submit">제출</button>
+        </div>
+      </fieldset>
+    </form>
+</body>
+</html>

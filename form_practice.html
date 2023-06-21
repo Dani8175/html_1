@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- placeholder = 박스안 텍스트 -->
+    <!-- step 은 설정한 값만큼씩 움직임 -->
+    <!-- row = 세로길이(열) cols = 가로길이(행) -->
+    <form action="./result.html" method="get"> 
+      <fieldset>
+        <legend>A/S 제출 양식</legend>
+        <div> 
+            <label for="username">아이디: </label> &nbsp;&nbsp;
+            <input type="text" name="username" placeholder="ID" autocomplete="on" required>
+        </div>
+        <div>
+            <label for="password">비밀번호: </label>
+            <input type="password" name="password" placeholder="password" autocomplete="on" required>
+        </div>
+        <div> 
+            <label for="age">나이: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" name="age" min="0" max="100" step="10" autocomplete="off">
+        </div>
+        <div>
+            <label for="summary">내용: </label>
+            <textarea name="summary" rows="10" cols="25" placeholder="내용 입력"></textarea>
+        </div>
+        <div>
+            <select name="type">
+                <option value="T_AS_1">환불</option>
+                <option value="T_AS_2">고장 신고</option>
+                <option value="T_AS_3">기타</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" name="type_2_1" value="1day">
+            <label for="type_2">1일 이내</label>
+            <input type="checkbox" name="type_2_2" value="1week">
+            <label for="type_2_2">1주 이내</label>
+            <input type="checkbox" name="type_2_3" value="1month">
+            <label for="type_2_3">1달 이내</label>
+        </div>
+        <div><!-- name이 같을 시 왔다갔다 다를시 둘다 체크 가능 -->
+            <input type="radio" name="type_3_1" value="emergency">
+            <label for="type_3_1">긴급</label>
+            <input type="radio" name="type_3_1" value="normal" checked>
+            <label for="type_3_2">일반</label>
+        </div>
+        <div>
+            <button type="submit">제출</button>
+        </div>
+      </fieldset>
+    </form>
+</body>
+</html>
